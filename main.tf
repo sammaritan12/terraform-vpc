@@ -1,17 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 2.70"
-    }
-  }
-}
-
-provider "aws" {
-  profile = "default"
-  region  = var.region
-}
-
 resource "aws_vpc" "main" {
   cidr_block = var.vpc_cidr
 }
